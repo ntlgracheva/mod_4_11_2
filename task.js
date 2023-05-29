@@ -1,12 +1,14 @@
 'use strict';
 
 const rectangle = {
+  _width: 5,
+  _height: 5,
+
   get width() {
     return this._width;
   },
   set width(a) {
     if (!isNaN(a)) { this._width = +a; }
-    else this._width = 5;
   },
 
   get height() {
@@ -14,7 +16,6 @@ const rectangle = {
   },
   set height(b) {
     if (!isNaN(b)) { this._height = +b; }
-    else this._height = 5;
   },
 
   get perimetr() {
@@ -28,11 +29,13 @@ const rectangle = {
 }
 console.log(rectangle.width);
 console.log(rectangle.height);
-
+console.log(rectangle.square);
+console.log(rectangle.perimetr);
 
 rectangle.width = 25;
 rectangle.height = 25;
 
 console.log(rectangle.width);
 console.log(rectangle.height);
+console.log(rectangle.square);
 console.log(rectangle.perimetr);
