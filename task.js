@@ -1,30 +1,32 @@
 'use strict';
 
 const rectangle = {
-  _width: 5,
-  _height: 5,
-
   set width(a) {
-    if (!isNaN(a)) { this._width = +a; }
+    if (!isNaN(a)) { this.width = +a; }
+    else this.width = 5;
   },
 
   set height(b) {
-    if (!isNaN(b)) { this._height = +b; }
+    if (!isNaN(b)) { this.height = +b; }
+    else this.height = 5;
   },
 
   get perimetr() {
-    let perimetr = 2 * (this._width + this._height);
+    let perimetr = 2 * (this.width + this.height);
     return perimetr + "см"
   },
   get square() {
-    let square = this._width * this._height;
+    let square = this.width * this.height;
     return square + "см"
   }
 }
-/*
-rectangle.width = 25;
+console.log(rectangle.width);
+console.log(rectangle.height);
 
-rectangle.height = 25;*/
+
+rectangle.width = 25;
+rectangle.height = 25;
+
 console.log(rectangle.width);
 console.log(rectangle.height);
 console.log(rectangle.perimetr);
